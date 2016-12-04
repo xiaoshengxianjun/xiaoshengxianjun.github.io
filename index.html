@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	</head>
+	<body>
+		
+		<!--头部导航栏-->
+		<nav id="nav" class="navbar navbar-default navbar-fixed-top navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand" style="margin: 0px;padding: 0px;"><img src="img/design.png"/></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+						<li class="active"><a href="#header">首页</a></li>
+						<li><a href="#selfinfo">自我介绍</a></li>
+						<li><a href="#works">兴趣作品</a></li>
+						<li><a href="#contact">联系我</a></li>
+						<li><a href="http://blog.csdn.net/zhongguohaoshaonian">博客</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="header" class="page index pageitem">
+			<div class="swiper-contain">
+				<div class="swiper-wrapper">
+					<div class="center text-center swiper-slide headline ">
+						<p class="bigheadline ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">Inspiration Design</p>
+						<p class="subheadline ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">一切源于灵感，展露思想的光芒。</p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="text-center downlogo">
+				<a href="#selfinfo" class="downToSelfinfo">
+					<i class="icon-angle-down"></i>
+				</a>
+			</div>
+			
+		</div>
+		<div id="selfinfo" class="page selfinfo pageitem">
+			<div class="container">
+				<div class="topline text-center">
+					<h1 class="block_title">Engineer</h1>
+				</div>
+				<div class="self-mess swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="self-img" id="self-img">
+								<img src="img/self.jpg" class="img-circle img-responsive center-block"/>
+							</div>
+							<div class="center text-center col-lg-offset-2 col-lg-8 summary">
+								<p>我是一名前端工程师，前端领域是一个能让人心旷神怡的领域，你可以舞动你的手指生成让人叹为观止的页面，也可以不可思议的传输各种数据……这是一个值得探索和深究的领域。当然，你需要掌握许多知识，JavaScript，jQuery，ajax等等。本人是一个前端探索者，追求者，设计和开发者，自身掌握的知识还不足以成为领域佼佼者，学无止境，乘万里风破万里浪，向着全栈前进。</p>
+								<a href="detail/skill/fontSkill.html" class="btn btn-primary" id="fontSkill">个人技能</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="self-img" id="self-img">
+								<img src="img/uidesigner.jpg" class="img-circle img-responsive center-block"/>
+							</div>
+							<div class="center text-center col-lg-offset-2 col-lg-8 summary">
+								<p>我是一名UI设计师，很荣幸能从事这个行业，UI设计师是一个能展现智慧光芒的职务，你必须去了解用户的心里，具有良好的审美，你可以将你所感所想，以界面的形式表达出来，你的灵感，智慧和感情都可以通过自己的创作传达给别人，让别人在光怪陆离的设计中感到震撼，让产品具有更深的感染力，吸引力，更加友好的用户体验。设计，绝不止步，灵感，从未枯竭。</p>
+								<a href="detail/skill/UISkill.html" class="btn btn-primary" id="UISkill">个人技能</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+    				<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+		<div id="works" class="works pageitem">
+			<div class="container">
+				<div class="topline text-center">
+					<h1 class="block_title">Interest works</h1>
+				</div>
+				<div class="workscontent center">
+					<div class="col-lg-3 col-xs-12 col-sm-6 worksitem">
+						<img src="img/jsicon.jpg" class="img-responsive center-block" />
+						<div class="describe">
+							<h4>JavaScript、jQuery</h4>
+							<p class="lead">这里是JavaScript、jQuery相关的一些知识，运用JavaScript或jQuery进行设计的一些小作品。</p>
+							<button class="btn btn-info" id="js-jq-btn">详情</button>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-12 col-sm-6 worksitem">
+						<img src="img/c3icon.jpg" class="img-responsive center-block" />
+						<div class="describe">
+							<h4>CSS3、Canvas</h4>
+							<p class="lead">这里是CSS3和canvas相关的一些知识，作品和兴趣话题，包含了一些有趣的创作。</p>
+							<button class="btn btn-info" id="css-canvas-btn">详情</button>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-12 col-sm-6 worksitem">
+						<img src="img/UIicon.png" class="img-responsive center-block" />
+						<div class="describe">
+							<h4>UI</h4>
+							<p class="lead">这里是和UI设计相关的一些知识，作品和兴趣话题。里面有页面设计，APP设计及其他UI设计内容。</p>
+							<button class="btn btn-info" id="UI-btn">详情</button>
+						</div>
+					</div>
+					<div class="col-lg-3 col-xs-12 col-sm-6 worksitem">
+						<img src="img/othericon.png" class="img-responsive center-block" />
+						<div class="describe">
+							<h4>其他</h4>
+							<p class="lead">Angular,React,Node等知识点都会在这里有涉及，有相关知识作品应用，知识分析兴趣话题等。</p>
+							<button class="btn btn-info" id="other-btn">详情</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact" class="contact pageitem">
+			<div class="container">
+				<div class="topline text-center">
+					<h1 class="contact_title">Contact me</h1>
+				</div>
+				<div class="col-sm-6 col-xs-12 more-about">
+					<h1>More about me</h1>
+					<p class="lead">很高兴你能看到这个个人网站，如果你觉得我可以帮到你，这其中有吸引你的地方，你对前端工程师或者UI设计师比较中意，你可以根据下方的联系方式进行联系。</p>
+					<address>
+						<h3>前端工程师</h3>
+						<p class="phone">手机号：18321976521</p>
+						<p class="qq">QQ：1227014386</p>
+						<p class="E-mail">邮箱：1227014386@qq.com</p>
+						<h3>UI设计师</h3>
+						<p class="phone">手机号：18202191893</p>
+						<p class="qq">QQ：1335327588</p>
+						<p class="E-mail">邮箱：1335327588@qq.com</p>
+					</address>
+				</div>
+				<div class="col-sm-6 col-xs-12 send-mess">
+					<h1>Send a message</h1>
+					<form role="form">
+					  	<div class="form-group">
+					    	<input type="text" class="form-control" placeholder="您的姓名">
+					    </div>
+					    <div class="form-group">
+					    	<input type="text" class="form-control" placeholder="你的联系方式（手机号/QQ/邮箱）">
+					    </div>
+					    <div class="form-group">
+					    	<textarea class="form-control" rows="5"></textarea>
+					    </div>
+					    <div class="form-group">
+					    	<button class="btn btn-default" id="sendbtn">留言</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.0.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
