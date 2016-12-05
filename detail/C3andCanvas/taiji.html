@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>̫太极</title>
+		<style type="text/css">
+			.taiji{
+				width: 404px;
+				height: 404px;
+				border-radius: 202px;
+				background: black;
+				position: relative;
+				transform: rotate(0deg);
+				margin: 0 auto;
+				
+			}
+			.whiteface{
+				width: 200px;
+				height: 400px;
+				background: white;
+				background-position: 2px;
+				border-radius: 200px 0px 0px 200px;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+			}
+			.blackfaceeye{
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+				background: white;
+				position: absolute;
+				left: 100px;
+				top: 0px;
+			}
+			.blackeye{
+				width: 50px;
+				height: 50px;
+				border-radius: 25px;
+				background: black;
+				position: absolute;
+				left: 75px;
+				top: 75px;
+			}
+			.whitefaceeye{
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+				background: black;
+				position: absolute;
+				left: 100px;
+				top: 200px;
+			}
+			.whiteeye{
+				width: 50px;
+				height: 50px;
+				border-radius: 25px;
+				background: white;
+				position: absolute;
+				left: 75px;
+				top: 75px;
+			}
+		</style>
+		<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="taiji" id="taiji">
+			<div class="whiteface">
+				<div class="blackfaceeye">
+					<div class="blackeye">
+						
+					</div>
+				</div>
+				<div class="whitefaceeye">
+					<div class="whiteeye">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var time = setInterval(circle,10);
+				var i = 0;
+				function circle(){
+					i++;
+					if(i>=360){
+						i=0;
+					}
+					$('#taiji').css({transform:'rotate( '+ i +'deg)'});
+				}
+			})
+		</script>
+	</body>
+</html>

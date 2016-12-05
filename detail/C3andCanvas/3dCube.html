@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>3D正方体</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				margin: 100px auto;
+				width: 300px;
+				height: 300px;
+				position: relative;
+				transform-style: preserve-3d;
+				/*设置元素为3D模式，其子元素保留3D位置(相对于父元素做3D变形操作)*/
+			}
+			
+			.box:hover {
+				transform: rotateY(-1000deg) rotateZ(1000deg) rotateX(1000deg);
+				transition: all 20s;
+			}
+			
+			img {
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0.5;
+				/*透明度*/
+			}
+			/*选择器匹配属于其父元素的第 N 个子元素*/
+			
+			img:nth-child(1) {
+				transform: rotateY(90deg) translateZ(150px);
+			}
+			
+			img:nth-child(2) {
+				transform: rotateY(180deg) translateZ(150px);
+			}
+			
+			img:nth-child(3) {
+				transform: rotateY(270deg) translateZ(150px);
+			}
+			
+			img:nth-child(4) {
+				transform: rotateY(360deg) translateZ(150px);
+			}
+			
+			img:nth-child(5) {
+				transform: rotateX(90deg) translateZ(150px);
+			}
+			
+			img:nth-child(6) {
+				transform: rotateX(90deg) translateZ(-150px);
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box">
+			<img src="img/1.jpg" />
+			<img src="img/2.jpg" />
+			<img src="img/3.jpg" />
+			<img src="img/4.jpg" />
+			<img src="img/5.jpg" />
+			<img src="img/6.jpg" />
+		</div>
+
+	</body>
+
+</html>

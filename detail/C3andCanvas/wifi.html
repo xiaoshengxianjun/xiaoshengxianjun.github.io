@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>WiFi</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 300px;
+				height: 300px;
+				margin: 0 auto;
+				transform: rotate(-45deg);
+				position: relative;
+			}
+			.box div{
+				opacity: 0;
+			}
+			.signal1{
+				width: 300px;
+				height: 300px;
+				border: 40px solid black;
+				border-left: none;
+				border-bottom: none;
+				border-radius: 0px 100% 0px 0px;
+				position: absolute;
+				bottom: 0px;
+				animation: run 3s 400ms infinite linear;
+				/*animation-delay: 800ms;*/
+			}
+			.signal2{
+				width: 200px;
+				height: 200px;
+				border: 40px solid black;
+				border-left: none;
+				border-bottom: none;
+				border-radius: 0px 100% 0px 0px;
+				position: absolute;
+				bottom: 0px;
+				animation: run 3s 200ms infinite linear;
+				/*animation-delay: 400ms;*/
+				
+			}
+			.signal3{
+				width: 100px;
+				height: 100px;
+				border: 40px solid black;
+				border-left: none;
+				border-bottom: none;
+				border-radius: 0px 100% 0px 0px;
+				position: absolute;
+				bottom: 0px;
+				animation: run 3s 0s infinite linear;
+				/*animation-delay: 0ms;*/
+				
+			}
+			div.signal4{
+				width: 30px;
+				height: 30px;
+				border: 30px solid black;
+				border-left: none;
+				border-bottom: none;
+				border-radius: 0px 100% 0px 0px;
+				background: black;
+				position: absolute;
+				bottom: 0px;
+				opacity: 1;
+			}
+			@keyframes run{
+				0%{opacity: 0;filter: alpha(opacity=0)}
+				5%{opacity: 1;filter: alpha(opacity=100)}
+				100%{opacity: 0;filter: alpha(opacity=0);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="signal1"></div>
+			<div class="signal2"></div>
+			<div class="signal3"></div>
+			<div class="signal4"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>光线球</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul li{
+				list-style: none;
+			}
+			html body{
+				background: black;
+			}
+			.box{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				margin-top: 100px;
+				position: relative;
+				perspective-origin: bottom left;
+				background: black;
+				border-radius:50%;
+				animation: boxrun 5s linear infinite alternate;
+			}
+			@keyframes boxrun{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.heng{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				transform-style: preserve-3d;
+				/*transform: rotate(-50deg);*/
+				animation: run 10s infinite alternate linear;
+			}
+			@keyframes run{
+				0%{transform: translate3d(0px,0px,0px) rotate3d(0,1,1,0deg) scale3d(1,1,1)}
+				50%{transform: translate3d(-100px,-100px,-100px) rotate3d(0,1,1,360deg) scale3d(0.5,0.5,0.5)}
+				100%{transform: translate3d(100px,100px,100px) rotate3d(0,1,1,0deg) scale3d(1.5,1.5,1.5)}
+			}
+			.heng li{
+				width: 200px;
+				height: 200px;
+				border: 2px solid red;
+				border-radius: 50%;
+				position: absolute;
+				box-shadow: 5px 5px 5px blue;
+			}
+			.heng li:nth-of-type(1){
+				transform: rotateY(15deg);
+			}
+			.heng li:nth-of-type(2){
+				transform: rotateY(30deg);
+			}
+			.heng li:nth-of-type(3){
+				transform: rotateY(45deg);
+			}
+			.heng li:nth-of-type(4){
+				transform: rotateY(60deg);
+			}
+			.heng li:nth-of-type(5){
+				transform: rotateY(75deg);
+			}
+			.heng li:nth-of-type(6){
+				transform: rotateY(90deg);
+			}
+			.heng li:nth-of-type(7){
+				transform: rotateY(105deg);
+			}
+			.heng li:nth-of-type(8){
+				transform: rotateY(120deg);
+			}
+			.heng li:nth-of-type(9){
+				transform: rotateY(135deg);
+			}
+			.heng li:nth-of-type(10){
+				transform: rotateY(150deg);
+			}
+			.heng li:nth-of-type(11){
+				transform: rotateY(165deg);
+			}
+			.heng li:nth-of-type(12){
+				transform: rotateY(180deg);
+			}
+			.zong{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				transform-style: preserve-3d;
+				animation: run1 10s infinite alternate linear;
+			}
+			@keyframes run1{
+				0%{transform: translate3d(0px,0px,0px)  rotate3d(1,1,0,0deg) scale3d(1,1,1)}
+				50%{transform: translate3d(100px,100px,100px) rotate3d(1,1,0,-360deg) scale3d(1.5,1.5,1.5)}
+				100%{transform: translate3d(-100px,-100px,-100px) rotate3d(1,1,0,0deg) scale3d(0.5,0.5,0.5)}
+			}
+			.zong li{
+				width: 200px;
+				height: 200px;
+				border: 2px solid skyblue;
+				border-radius: 50%;
+				position: absolute;
+				box-shadow: 5px 5px 5px green;
+				
+			}
+			.zong li:nth-of-type(1){
+				transform: rotateX(15deg);
+			}
+			.zong li:nth-of-type(2){
+				transform: rotateX(30deg);
+			}
+			.zong li:nth-of-type(3){
+				transform: rotateX(45deg);
+			}
+			.zong li:nth-of-type(4){
+				transform: rotateX(60deg);
+			}
+			.zong li:nth-of-type(5){
+				transform: rotateX(75deg);
+			}
+			.zong li:nth-of-type(6){
+				transform: rotateX(90deg);
+			}
+			.zong li:nth-of-type(7){
+				transform: rotateX(105deg);
+			}
+			.zong li:nth-of-type(8){
+				transform: rotateX(120deg);
+			}
+			.zong li:nth-of-type(9){
+				transform: rotateX(135deg);
+			}
+			.zong li:nth-of-type(10){
+				transform: rotateX(150deg);
+			}
+			.zong li:nth-of-type(11){
+				transform: rotateX(165deg);
+			}
+			.zong li:nth-of-type(12){
+				transform: rotateX(180deg);
+			}
+			.taiji{
+				width: 204px;
+				height: 204px;
+				border-radius: 102px;
+				background: maroon;
+				position: relative;
+				transform: rotate(0deg);
+			}
+			.whiteface{
+				width: 100px;
+				height: 200px;
+				background: white;
+				background-position: 2px;
+				border-radius: 100px 0px 0px 100px;
+				position: absolute;
+				left: 2px;
+				top: 2px;
+			}
+			.blackfaceeye{
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background: white;
+				position: absolute;
+				left: 50px;
+				top: 0px;
+			}
+			.blackeye{
+				width: 26px;
+				height: 26px;
+				border-radius: 13px;
+				background: black;
+				position: absolute;
+				left: 38px;
+				top: 38px;
+			}
+			.whitefaceeye{
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background: maroon;
+				position: absolute;
+				left: 50px;
+				top: 100px;
+			}
+			.whiteeye{
+				width: 26px;
+				height: 26px;
+				border-radius: 13px;
+				background: white;
+				position: absolute;
+				left: 38px;
+				top: 38px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="heng">
+				<li>
+					<div class="taiji" id="taiji">
+						<div class="whiteface">
+							<div class="blackfaceeye">
+								<div class="blackeye">
+									
+								</div>
+							</div>
+							<div class="whitefaceeye">
+								<div class="whiteeye">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>
+					<div class="taiji" id="taiji">
+						<div class="whiteface">
+							<div class="blackfaceeye">
+								<div class="blackeye">
+									
+								</div>
+							</div>
+							<div class="whitefaceeye">
+								<div class="whiteeye">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ul class="zong">
+				<li>
+					<div class="taiji" id="taiji">
+						<div class="whiteface">
+							<div class="blackfaceeye">
+								<div class="blackeye">
+									
+								</div>
+							</div>
+							<div class="whitefaceeye">
+								<div class="whiteeye">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>
+					<div class="taiji" id="taiji">
+						<div class="whiteface">
+							<div class="blackfaceeye">
+								<div class="blackeye">
+									
+								</div>
+							</div>
+							<div class="whitefaceeye">
+								<div class="whiteeye">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>跑马灯</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box{
+				width: 600px;
+				height: 600px;
+				border: 1px #999 solid;
+				margin: 0 auto;
+				position: relative;
+				/*perspective-origin: center top;*/
+				perspective: 1000px;
+
+			}
+			/*.box:hover ul{
+				transform: rotateY(180deg);
+			}*/
+			.ul{
+				width: 200px;
+				height: 300px;
+				position: absolute;
+				left: 200px;
+				top: 150px;
+				transform-style: preserve-3d;
+				transition: 5s;
+				animation: run 10s infinite linear;
+			}
+			@keyframes run{
+				from{}
+				to{transform: rotate3d(0,1,0,360deg)}
+			}
+			.ul li{
+				list-style: none;
+				width: 200px;
+				height: 300px;
+				position: absolute;
+				/*transform: translateZ(250px);*/
+			}
+			.ul li img{
+				width: 200px;
+				height: 300px;
+			}
+			.ul li:nth-of-type(1){
+				transform:rotateY(60deg) translateZ(250px) ;
+			}
+			.ul li:nth-of-type(2){
+				transform:rotateY(120deg) translateZ(250px) ;
+			}
+			.ul li:nth-of-type(3){
+				transform:rotateY(180deg) translateZ(250px) ;
+			}
+			.ul li:nth-of-type(4){
+				transform:rotateY(240deg) translateZ(250px) ;
+			}
+			.ul li:nth-of-type(5){
+				transform:rotateY(300deg) translateZ(250px) ;
+			}
+			.ul li:nth-of-type(6){
+				transform:rotateY(360deg) translateZ(250px) ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="ul">
+				<li><img src="img/1.jpg"/></li>
+				<li><img src="img/2.jpg"/></li>
+				<li><img src="img/3.jpg"/></li>
+				<li><img src="img/4.jpg"/></li>
+				<li><img src="img/5.jpg"/></li>
+				<li><img src="img/6.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+</html>
