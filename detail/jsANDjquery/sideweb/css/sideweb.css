@@ -1,0 +1,123 @@
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.rightNav {
+	width: 130px;
+	height: 318px;
+	position: fixed;
+	right: 0;
+	top: 150px;
+}
+
+.rightNav a {
+	height: 30px;
+	display: block;
+	width: 130px;
+	text-decoration: none;
+	text-align: center;
+	font: 18px/30px "微软雅黑";
+	color: #fff;
+	background: chartreuse;
+	right: -100px;
+}
+
+.rightNav a+a {
+	display: block;
+	margin-top: 2px;
+}
+
+.rightNav a em {
+	font-style: normal;
+	float: left;
+	height: 30px;
+	width: 30px;
+	background: deepskyblue;
+	text-align: center;
+	color: #fff;
+	display: inline-block;
+	/*过渡   元素从一种样式逐渐改变为另一种的效果（减速,ease-out 函数等同于贝塞尔曲线*/
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+}
+
+.rightNav a:hover {
+	background: darkviolet;
+}
+
+.rightNav a:hover em {
+	background: chartreuse;
+	transform: rotateZ(360deg);
+	/*旋转360° 用于内联(inline)元素和块级(block)元素*/
+	-webkit-transform: rotateZ(360deg);
+	-ms-transform: rotateZ(360deg);
+	-moz-transform: rotateZ(360deg);
+}
+
+#top,
+#Banner,
+#Nav,
+#Tab,
+#Service,
+#Picture,
+#Album,
+#Form,
+#Scorlling,
+#Other,
+h1 {
+	font: 50px/600px "微软雅黑";
+	color: #fff;
+}
+
+#top,
+#Banner,
+#Nav,
+#Tab,
+#Service,
+#Picture,
+#Album,
+#Form,
+#Scorlling,
+#Other {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background: red;
+}
+
+#Banner,
+#Service {
+	background: blue;
+}
+
+#Nav,
+#Other {
+	background: green;
+}
+
+#Tab,
+#Picture {
+	background: pink;
+}
+
+#Album {
+	background: goldenrod;
+}
+
+#Form {
+	background: aqua;
+}
+
+#Scorlling {
+	background: indigo;
+}

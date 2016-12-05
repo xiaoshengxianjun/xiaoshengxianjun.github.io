@@ -1,0 +1,92 @@
+#box {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #CCC;
+	position: relative;
+	margin: 0 auto;
+}
+
+#box .sImg {
+	width: 200px;
+	height: 200px;
+}
+
+#box .magnify {
+	width: 225px;
+	height: 225px;
+	position: absolute;
+	left: 226px;
+	top: -1px;
+	overflow: hidden;
+	display: none;
+}
+
+#box .magnify img {
+	position: absolute;
+}
+
+#box .move {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: none;
+}
+
+#tabs {
+	width: 200px;
+	height: 30px;
+	position: relative;
+	top: 10px;
+}
+
+#tabs #imgList {
+	width: 150px;
+	height: 30px;
+	overflow: hidden;
+	position: absolute;
+	left: 25px;
+	top: 0px;
+	display: inline-block;
+}
+
+#tabs #imgList #listBox {
+	position: relative;
+}
+
+#tabs #imgList img {
+	width: 28px;
+	height: 28px;
+	float: left;
+	position: absolute;
+	border: 1px solid white;
+}
+
+#tabs #imgList img.rB {
+	border: 1px solid red;
+}
+
+#tabs a {
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+	width: 25px;
+	height: 30px;
+	font: 10px/30px "";
+	position: absolute;
+	text-align: center;
+}
+
+#tabs a.left {
+	left: 0;
+	top: 0;
+}
+
+#tabs a.right {
+	left: 175px;
+	top: 0px;
+}

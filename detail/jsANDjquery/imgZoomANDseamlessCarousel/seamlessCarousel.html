@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>无缝轮播</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul li{
+				list-style: none;
+			}
+			.box{
+				width: 840px;
+				height: 180px;
+				margin: 100px auto;
+				border: 2px #000 solid;
+				background-color: #ccc;
+			}
+			.picBox{
+				width: 840px;
+				height: 160px;
+				margin-top: 10px;
+				overflow: hidden;
+				position: relative;
+			}
+			#ul{
+				width: 100%;
+				height: 160px;
+				position: absolute;
+				cursor: pointer;
+			}
+			#ul li {
+				width: 200px;
+				height: 160px;
+				position: absolute;
+			}
+			#ul li img{
+				width: 200px;
+				height: 160px;
+			}
+			.picBox a{
+				display: inline-block;
+				background-color: #ccc;
+				width: 30px;
+				height: 50px;
+				position: absolute;
+				opacity: 0.6;
+				filter: alpha(opacity=60);
+				font-size: 30px;
+				text-align: center;
+				line-height: 50px;
+				text-decoration: none;
+				top: 55px;
+				display: none;
+			}
+			.toLeft{
+				left: 0px;
+			}
+			.toRight{
+				right: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="picBox" id="picBox">
+				<ul id="ul">
+					<li><img src="img/mn1.jpg"/></li>
+					<li><img src="img/mn2.jpg"/></li>
+					<li><img src="img/mn3.jpg"/></li>
+					<li><img src="img/mn4.jpg"/></li>
+					
+					<li><img src="img/mn1.jpg"/></li>
+					<li><img src="img/mn2.jpg"/></li>
+					<li><img src="img/mn3.jpg"/></li>
+					<li><img src="img/mn4.jpg"/></li>
+				</ul>
+				<a href="javascript:;" id="toLeft" class="toLeft">&lt;</a>
+				<a href="javascript:;" id="toRight" class="toRight">&gt;</a>
+			</div>
+		</div>
+		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var ul = document.getElementById("ul");
+			var lis = ul.getElementsByTagName('li');
+			var picBox = document.getElementById("picBox");
+			for(var i=0; i<lis.length; i++){
+				lis[i].style.left = (lis[i].offsetWidth+10)*i + "px";
+			}
+			var index = 0;
+			var speed = -1;
+			function carousel(){
+				index++;
+				//n++;
+				if(ul.offsetLeft < -840){
+					//n = 0;
+					ul.style.left = "0px";
+				}else if(ul.offsetLeft > 0){
+					ul.style.left = "-840px";	
+				}
+//				move(ul,{left:-n},fn);
+				ul.style.left = ul.offsetLeft + speed + "px";
+				
+			}
+			
+			var timer = setInterval(carousel,20);
+			var toLeft = document.getElementById("toLeft");
+			var toRight = document.getElementById("toRight");
+			picBox.onmouseover = function(){
+				clearInterval(timer);
+				toLeft.style.display = "block";
+				toRight.style.display = "block";
+				
+			}
+			picBox.onmouseout = function(){
+				toLeft.style.display = "none";
+				toRight.style.display = "none";
+				clearInterval(timer);
+				timer = setInterval(carousel,20);
+			}
+			toLeft.onclick = function(){
+				clearInterval(timer);
+				speed = -1;
+				timer = setInterval(carousel,20);
+			}
+			toRight.onclick = function(){
+				clearInterval(timer);
+				speed = 1;
+				timer = setInterval(carousel,20);
+			}
+		</script>
+	</body>
+</html>

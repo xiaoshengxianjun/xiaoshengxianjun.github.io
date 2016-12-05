@@ -1,0 +1,32 @@
+#gameDiv {
+	width: 476px;
+	height: 476px;
+	margin: 100px auto;
+	border: 1px solid black;
+}
+
+#gameDiv .slice {
+	width: 118px;
+	height: 118px;
+	margin-top: 1px;
+	margin-left: 1px;
+	float: left;
+	background: red;
+}
+
+.slice {
+	font-size: 50px;
+	line-height: 118px;
+	text-align: center;
+	color: yellow;
+	font-weight: bold;
+}
+
+#mask {
+	width: 118px;
+	height: 118px;
+	background: #DDD;
+	opacity: 0.3;
+	position: absolute;
+	display: none;
+}
