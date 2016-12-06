@@ -63,6 +63,8 @@ html,body{
 
 /*-----------------------自我介绍------------------------*/
 .selfinfo{
+	height:auto;
+	padding-bottom:100px;
 	background: url(../img/bg-selfinfo.jpg) no-repeat center top;
 	/*background: white;*/
 }
