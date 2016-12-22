@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#myUl{
+				list-style: none;
+				width: 1000px;
+				margin: 10px auto;
+			}
+			li{
+				width: 200px;
+				margin-left: 10px;
+				float: left;
+				
+			}
+			li div{
+				width: 200px;
+				margin-bottom: 10px;
+				border: 1px #ccc solid;
+			}
+			li div img{
+				width: 200px;
+				
+			}
+			li div p{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="myUl">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload = function(){
+			var isLoading = false;
+			function loadImg(){
+				ajax("GET","data/pbl.json",function(data){
+					allImg = JSON.parse(data);
+					for(var i=0; i<allImg.length; i++){
+						var img = document.createElement('img');
+						img.src = "img/" + allImg[i].src;
+						var p = document.createElement('p');
+						p.innerHTML = allImg[i].des;
+						var div = document.createElement('div');
+						div.appendChild(img);
+						div.appendChild(p);
+						var shortestLi = findShortestLi();
+						shortestLi.appendChild(div);
+					}
+					isLoading = false;
+				});
+			}
+			loadImg();
+			function findShortestLi(){
+				var myUl = document.getElementById("myUl");
+				var lis = myUl.getElementsByTagName('li');
+				var h = lis[0].offsetHeight;
+				var index = 0;
+				for(var i=0; i<lis.length; i++){
+					if(lis[i].offsetHeight<h){
+						h = lis[i].offsetHeight;
+						index = i;
+					}
+				}
+				return lis[index];
+			}
+			window.onscroll = function(){
+				var he1 = document.body.scrollTop || document.documentElement.scrollTop;
+				var he2 = document.body.clientHeight || document.documentElement.clientHeight;
+				if(he1+he2 > findShortestLi().offsetHeight){
+					if(!isLoading){
+						isLoading = true;
+						loadImg();
+					}
+				}
+			}
+		}
+		</script>
+	</body>
+</html>
