@@ -4,16 +4,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no"/>
 		<title>首页</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<!-- 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/> -->
 	</head>
 	<body>
 		
 		<!--头部导航栏-->
-		<nav id="nav" class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<!-- 		<nav id="nav" class="navbar navbar-default navbar-fixed-top navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
 					<a href="#" class="navbar-brand" style="margin: 0px;padding: 0px;"><img src="img/design.png"/></a>
@@ -161,11 +161,19 @@
 					</form>
 				</div>
 			</div>
-		</div>
-		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		</div> -->
+<!-- 		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper-3.4.0.jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script> -->
+		<script type="text/javascript">
+			var ua = navigator.userAgent.toLowerCase();
+			if(/iphone|ipad|ipod/.test(ua)) {
+				window.location.href = "https://itunes.apple.com/cn/app/id1142110895?mt=8";
+			} else if(/android/.test(ua)) {
+				window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.shhx.sls_app.activity&fromcase=40002";
+			}
+		</script>
 	</body>
 </html>
